@@ -1,0 +1,38 @@
+{
+    "name": "billeragi-backend",
+    "version": "1.0.0",
+    "description": "Billing AI Assistant - Full Automation Platform Backend",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "node --watch server.js",
+        "test:api": "node tests/api.test.js",
+        "test:invoice": "node tests/invoice.test.js",
+        "test:ai-validation": "node tests/ai-validation.test.js",
+        "test:email": "node tests/email.test.js"
+    },
+    "keywords": [
+        "billing",
+        "ai",
+        "automation",
+        "invoice"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "@google/generative-ai": "^0.21.0",
+        "aws-sdk": "^2.1691.0",
+        "bcrypt": "^5.1.1",
+        "cloudinary": "^2.5.1",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.21.1",
+        "jsonwebtoken": "^9.0.2",
+        "node-cron": "^3.0.3",
+        "nodemailer": "^6.9.16",
+        "pdfkit": "^0.15.0",
+        "pg": "^8.13.1",
+        "winston": "^3.17.0"
+    }
+}
