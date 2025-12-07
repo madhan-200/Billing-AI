@@ -86,9 +86,9 @@ function Dashboard({ setIsAuthenticated }) {
         }))
         : [];
 
-    const invoiceVolumeData = revenueChartData.map(item => ({
+    const invoiceVolumeData = revenueChartData.map((item, index) => ({
         month: item.month,
-        count: Math.floor(Math.random() * 50) + 10 // Mock data
+        count: trends.status_breakdown ? Object.values(trends.status_breakdown).reduce((a, b) => a + b, 0) / revenueChartData.length : 0
     }));
 
     return (
